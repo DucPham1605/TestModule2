@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Country list</title>
+</head>
+<body>
+<h1>Countries</h1>
+<a href="/create-country">Create new country</a>
+<table border="1">
+<tr>
+    <th>Name</th>
+</tr>
+<th:block th:each="country :${countries}">
+<tr>
+    <td th:text="${country.name}"></td>
+</tr>
+</th:block>
+</table>
+</body>
+</html>
